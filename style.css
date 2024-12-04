@@ -52,8 +52,7 @@ header form button{
     border-radius: 100vw;
     padding: 0.5rem 1rem;
     border: solid 1px rgba(255, 255, 255, 0);
-    align-self: flex-end;
-    background-color: crimson;
+    background-color: #dc143c;
     transition: 200ms;
 }
 
@@ -76,6 +75,64 @@ header ul li:hover{
     transform: scale(1.2);
 }
 
+/* Estilos tarjetas tipos de gatos */
+.tipes-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;  
+    gap: 3rem;
+}
+.tipes-card{
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 0;
+    transition: 200ms;
+    width: 50%;
+
+    -webkit-box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
+    -moz-box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
+    box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
+}
+
+.icon-tipes-container img{
+    width: 100%;
+}
+
+.icon-tipes-container{
+    width: 4.5rem;
+}
+
+.image-tipes-container{
+    width: 35%;
+}
+
+.image-tipes-container img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info-tipes-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    width: 65%;
+}
+
+.tipes-card:hover{
+    background-color: rgba(0, 0, 0, 0.918);
+    transform: translateY(-5px);
+}
+
+
+
+
+/* Estilos tarjetas gatos */
 
 .cards-container{
     display: flex;
@@ -137,4 +194,50 @@ header ul li:hover{
 }
 .card-image-container img{
     width: 20rem
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+}
+
+footer img{
+    width: 100%;
+}
+
+.footer-logo-container img{
+    width: 100%;
+    filter: invert(100);
+}
+.logos-container img{
+    filter: invert(100);
+    width: 100%;
+    transition: 200ms;
+}
+
+.logos-container img:hover{
+    transform: scale(1.3);
+}
+
+.logos-container{
+    width: 11rem;
+    display: flex;
+    gap: 2rem;
+}
+.footer-logo-container{
+    width: 8rem;
+}
+.links-container{
+    display: flex;
+    gap: 3.5rem;
+    font-weight: bold;
+}
+
+.links-container li:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
