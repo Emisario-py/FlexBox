@@ -21,6 +21,12 @@ header{
     align-items: center;
 }
 
+#header-container{
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+}
+
 .header-image-container{
     width: 8rem;
     background-color: white;
@@ -82,6 +88,7 @@ header ul li:hover{
     align-items: center;
     padding: 4rem;  
     gap: 3rem;
+    padding-top: 13rem;
 }
 .tipes-card{
     display: flex;
