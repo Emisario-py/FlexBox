@@ -11,6 +11,12 @@ ul{
     list-style: none;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Estilos header */
 header{
     display: flex;
@@ -23,12 +29,12 @@ header{
 
 #header-container{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
 }
 
 .header-image-container{
-    width: 8rem;
+    width: 5rem;
     background-color: white;
     border-radius: 75%;
 }
@@ -37,7 +43,7 @@ header{
 }
 
 header form{
-    width: 35%;
+    width: 50%;
 }
 
 header form input{
@@ -45,6 +51,7 @@ header form input{
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 100vw;
+    font-size: 15px;
 }
 
 header form input:focus{
@@ -53,6 +60,7 @@ header form input:focus{
 }
 
 header form button{
+    font-size: 15px;
     background-color: black;
     color: white;
     border-radius: 100vw;
@@ -75,6 +83,7 @@ header ul{
 header ul li{
     transition: 200ms;
     font-style: italic;
+    font-size: 15px;
 }
 
 header ul li:hover{
@@ -88,7 +97,7 @@ header ul li:hover{
     align-items: center;
     padding: 4rem;  
     gap: 3rem;
-    padding-top: 13rem;
+    padding-top: 10rem;
 }
 .tipes-card{
     display: flex;
@@ -98,7 +107,8 @@ header ul li:hover{
     border-radius: 10px;
     padding: 0;
     transition: 200ms;
-    width: 50%;
+    width: 70%;
+    font-size: 15px;
 
     -webkit-box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
     -moz-box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
@@ -110,11 +120,11 @@ header ul li:hover{
 }
 
 .icon-tipes-container{
-    width: 4.5rem;
+    width: 4rem;
 }
 
 .image-tipes-container{
-    width: 35%;
+    width: 50%;
 }
 
 .image-tipes-container img{
@@ -142,11 +152,12 @@ header ul li:hover{
 /* Estilos tarjetas gatos */
 
 .cards-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 2rem;
     justify-content: center;
     align-items: center;
+    width: 50%;
     gap: 2rem;
 }
 .card-info h1{
@@ -160,7 +171,7 @@ header ul li:hover{
 }
 
 .card-info p{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 200;
     text-align: justify;
 }
@@ -196,11 +207,11 @@ header ul li:hover{
 
 .card-image-container{
     display: flex;
-    width: 80%;
+    width: 20rem;
     justify-content: center;
 }
 .card-image-container img{
-    width: 20rem
+    width: 100%
 }
 
 footer{
@@ -210,6 +221,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     padding: 1rem 4rem;
+    width: 100%;
 }
 
 footer img{
@@ -236,15 +248,146 @@ footer img{
     gap: 2rem;
 }
 .footer-logo-container{
-    width: 8rem;
+    width: 7rem;
 }
 .links-container{
     display: flex;
     gap: 3.5rem;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .links-container li:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Media Queries */
+
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+    .cards-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header form input{
+    font-size: 10px;
+    }
+
+    header form button{
+        font-size: 10px;
+    }
+
+    header ul li{
+        font-size: 15px;
+    }
+    .links-container{
+        font-size: 10px;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .cards-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header form input{
+        font-size: 8px;
+    }
+
+    header form button{
+        font-size: 8px;
+    }
+
+    header ul li{
+        font-size: 12px;
+    }
+    header ul{
+        gap: 1rem;
+    }
+    .logos-container{
+        width: 8rem;
+    }
+    .footer-logo-container{
+        width: 5rem;
+    }
+    .links-container{
+        font-size: 10px;
+        gap: 2rem;
+    }
+
+    footer{
+        padding: 1rem 2rem;
+    }
+
+    .tipes-card{
+        font-size: 10px;
+    }
+    .card-info p{
+        font-size: 12px;
+
+    }
+    .card-image-container{
+        width: 15rem;
+    }
+    .cards{
+        width: 20rem;
+    }
+    .tipes-container h1{
+        font-size: 25px;
+    }
+    .tipes-card{
+        width: 95%;
+    }
+    .icon-tipes-container{
+        width: 3rem;
+    }
+
+    .image-tipes-container{
+        width: 70%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .cards-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header form{
+        width: 50%;
+    }
+     header form input{
+        font-size: 7px;
+    }
+
+    header form button{
+        font-size: 7px;
+        position: absolute;
+    }
+
+    .header-image-container{
+        width: 4rem;
+    }
+    .tipes-container h1{
+        font-size: 20px;
+    }
+    .tipes-card{
+        width: 100%;
+    }
+    .icon-tipes-container{
+        display: none;
+    }
+     .logos-container{
+        width: 7rem;
+    }
+    .footer-logo-container{
+        width: 4rem;
+    }
+    .links-container{
+        font-size: 8px;
+        gap: 1rem;
+    }
 }
