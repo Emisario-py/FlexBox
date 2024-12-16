@@ -15,12 +15,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgb(141,11,65);
+    background: linear-gradient(90deg, rgba(141, 11, 65, 0.67) 50%, rgba(211,157,85,1) 100%);
 }
 
 /* Estilos header */
 header{
     display: flex;
-    background-color: black;
+    background-color:rgb(141, 11, 65);
     color: white;
     padding: 1rem 2.5rem;
     justify-content: space-between;
@@ -35,11 +37,12 @@ header{
 
 .header-image-container{
     width: 5rem;
-    background-color: white;
     border-radius: 75%;
 }
 .header-image-container img{
     width: 100%;
+    filter: invert(100);
+
 }
 
 header form{
@@ -66,13 +69,13 @@ header form button{
     border-radius: 100vw;
     padding: 0.5rem 1rem;
     border: solid 1px rgba(255, 255, 255, 0);
-    background-color: #dc143c;
+    background-color: rgb(211, 157, 85);
     transition: 200ms;
 }
 
 header form button:hover{
     border: 1px solid white;
-    background-color: black;
+    background-color: crimson
 }
 
 header ul{
@@ -89,6 +92,55 @@ header ul li{
 header ul li:hover{
     transform: scale(1.2);
 }
+/* Estilos apartado de comida */
+.food-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.75rem;
+    color: white;
+    padding: 12rem 4rem 0 4rem;
+}   
+
+.big-card{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: rgb(141, 11, 65);
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.big-card-image-container{
+    width: 20rem;
+}
+
+.big-card-image-container img{
+    width: 100%;
+}
+
+.small-card-icon-container{
+    width: 8rem;
+    border-radius: 15px;
+
+}
+
+.small-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(141, 11, 65);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+.small-card-icon-container img{
+    width: 100%;
+}
 
 /* Estilos tarjetas tipos de gatos */
 .tipes-container{
@@ -97,11 +149,12 @@ header ul li:hover{
     align-items: center;
     padding: 4rem;  
     gap: 3rem;
-    padding-top: 10rem;
+    padding-top: 5rem;
+    color: white;
 }
 .tipes-card{
     display: flex;
-    background-color: black;
+    background-color: rgb(141, 11, 65);
     color: white;
     justify-content: space-between;
     border-radius: 10px;
@@ -110,9 +163,9 @@ header ul li:hover{
     width: 70%;
     font-size: 15px;
 
-    -webkit-box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
-    -moz-box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
-    box-shadow: 11px 10px 0px 0px rgba(220,20,60,1);
+    -webkit-box-shadow: 11px 10px 0px 0px rgb(211, 157, 85);
+    -moz-box-shadow: 11px 10px 0px 0px rgb(211, 157, 85);
+    box-shadow: 11px 10px 0px 0px rgb(211, 157, 85);
 }
 
 .icon-tipes-container img{
@@ -142,10 +195,12 @@ header ul li:hover{
 }
 
 .tipes-card:hover{
-    background-color: rgba(0, 0, 0, 0.918);
+    background-color: rgba(141, 11, 65, 0.708);
     transform: translateY(-5px);
 }
-
+h1{
+    color: white;
+}
 
 
 
@@ -163,7 +218,7 @@ header ul li:hover{
 .card-info h1{
     font-size: 35px;
     font-style: italic;
-    color: gray;
+    color: white;
 }
 
 .card-info{
@@ -177,7 +232,7 @@ header ul li:hover{
 }
 
 .cards{
-    background-color: black;
+    background-color: rgb(141, 11, 65);
     color: white;
     width: 25rem;
     padding: 2rem 3rem;
@@ -190,7 +245,7 @@ header ul li:hover{
 
 .cards button{
     border: 1px solid white;
-    background-color: black;
+    background-color: rgb(211, 157, 85);
     color: white;
     border-radius: 100vw;
     padding: 0.5rem 1rem;
@@ -215,7 +270,7 @@ header ul li:hover{
 }
 
 footer{
-    background-color: black;
+    background-color: rgb(141, 11, 65);
     color: white;
     display: flex;
     align-items: center;
@@ -285,6 +340,10 @@ footer img{
     .links-container{
         font-size: 10px;
     }
+    .tipes-card{
+        width: 97%;
+    }
+    
     
 }
 
@@ -349,6 +408,9 @@ footer img{
     .image-tipes-container{
         width: 70%;
     }
+    h1{
+        font-size: 25px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and down) */
@@ -374,6 +436,10 @@ footer img{
     .tipes-container h1{
         font-size: 20px;
     }
+
+    h1{
+        font-size: 20px;
+    }
     .tipes-card{
         width: 100%;
     }
@@ -390,4 +456,11 @@ footer img{
         font-size: 8px;
         gap: 1rem;
     }
+    .food-container{
+        grid-template-columns: repeat(2,1fr);
+    }   
+    .food-container{
+        padding: 9rem 4rem 0 4rem;
+    }   
 }
+
